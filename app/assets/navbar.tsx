@@ -1,13 +1,10 @@
 "use client";
 
-import { ArrowForward, MenuOpen, ThreeKOutlined } from "@mui/icons-material";
+import { ArrowForward, MenuOpen } from "@mui/icons-material";
 import {
   Button,
   Drawer,
   IconButton,
-  Menu,
-  MenuItem,
-  Modal,
   Tab,
   Tabs,
   useMediaQuery,
@@ -40,7 +37,7 @@ function Navbar({ active, dark }: NavbarProps) {
   };
 
   return (
-    <nav className="fixed top-5 md:left-1/2 md:-translate-x-1/2 left-5">
+    <nav className="fixed top-5 z-50 md:left-1/2 md:-translate-x-1/2 left-5">
       {isMobile ? (
         <div>
           <IconButton
@@ -48,6 +45,7 @@ function Navbar({ active, dark }: NavbarProps) {
               border: "1px solid",
               color: dark ? "#dbdbdb" : "#4a4a4a",
               borderColor: dark ? "#313131" : "#bebebe",
+              backdropFilter: "blur(3px)",
             }}
             onClick={() => setOpen(true)}
           >
@@ -55,7 +53,7 @@ function Navbar({ active, dark }: NavbarProps) {
           </IconButton>
           <Drawer
             anchor="top"
-            BackdropProps={{ sx: { backdropFilter: "blur(2px)" } }}
+            sx={{ backdropFilter: "blur(2px)" }}
             open={open}
             onClose={() => setOpen(false)}
           >
@@ -103,6 +101,7 @@ function Navbar({ active, dark }: NavbarProps) {
           sx={{
             borderColor: dark ? "#313131" : "#bebebe",
             backgroundColor: "transparent",
+            backdropFilter: "blur(3px)",
           }}
         >
           {SECTIONS.map((item, ind) => (
