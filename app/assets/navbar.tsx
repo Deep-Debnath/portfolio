@@ -12,13 +12,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const SECTIONS = [
-  "Home",
-  "About",
-  "Experience",
-  "Projects",
-  "Contact",
-] as const;
+const SECTIONS = ["Home", "About", "Skills", "Projects", "Contact"] as const;
 
 type Section = (typeof SECTIONS)[number];
 
@@ -87,7 +81,7 @@ function Navbar({ active, dark }: NavbarProps) {
             style: {
               height: "80%",
               top: 4.7,
-              backgroundColor: dark ? "#27272A" : "#ddf",
+              backgroundColor: dark ? "#414141" : "#c4c4c4",
             },
           }}
           textColor="inherit"
@@ -101,7 +95,7 @@ function Navbar({ active, dark }: NavbarProps) {
           sx={{
             borderColor: dark ? "#313131" : "#bebebe",
             backgroundColor: "transparent",
-            backdropFilter: "blur(3px)",
+            backdropFilter: "blur(10px)",
           }}
         >
           {SECTIONS.map((item, ind) => (

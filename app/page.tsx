@@ -6,6 +6,9 @@ import Layout from "./assets/navbar";
 import Initial from "./components/initial";
 import Buttons from "./components/homebuttons";
 import Status from "./components/status";
+import About from "./components/about";
+import Skills from "./components/skills";
+import Carousel from "./components/carousel";
 
 export default function Home() {
   const [dark, setDark] = useState(true);
@@ -25,11 +28,16 @@ export default function Home() {
       <Initial dark={dark} />
       <Status dark={dark} />
       <Buttons dark={dark} />
-      <div id="Home" className="h-200">a</div>
-      <div id="About" className="h-200">b</div>
-      <div id="Experience" className="h-200">c</div>
-      <div id="Projects" className="h-200">d</div>
-      <div id="Contact" className="h-200">e</div>
+      <Carousel dark={dark} />
+      <About dark={dark} />
+      <Skills dark={dark} />
+
+      <div id="Projects" className="h-200">
+        d
+      </div>
+      <div id="Contact" className="h-200">
+        e
+      </div>
     </div>
   );
 }

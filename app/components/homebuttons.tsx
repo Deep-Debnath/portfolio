@@ -34,7 +34,7 @@ export default function Buttons({ dark }: { dark: boolean }) {
   };
 
   return (
-    <div className="sm:pt-5 pt-5 flex justify-center">
+    <div className="pt-5 flex justify-center">
       <Stack
         direction={{ sm: "row", xs: "column" }}
         gap={2}
@@ -96,6 +96,12 @@ export default function Buttons({ dark }: { dark: boolean }) {
           variant="outlined"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
+          onClick={() => {
+            setHovered(false);
+            setTimeout(() => {
+              setHovered(true);
+            }, 100);
+          }}
           startIcon={
             <motion.span
               className="relative w-7 h-7 overflow-hidden flex items-center justify-center"
