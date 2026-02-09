@@ -39,7 +39,7 @@ function Navbar({ active, dark }: NavbarProps) {
               border: "1px solid",
               color: dark ? "#dbdbdb" : "#4a4a4a",
               borderColor: dark ? "#313131" : "#bebebe",
-              backdropFilter: "blur(3px)",
+              backdropFilter: "blur(10px)",transition:"all 300ms"
             }}
             onClick={() => setOpen(true)}
           >

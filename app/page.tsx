@@ -9,6 +9,7 @@ import Status from "./components/status";
 import About from "./components/about";
 import Skills from "./components/skills";
 import Carousel from "./components/carousel";
+import Projects from "./components/projects";
 
 export default function Home() {
   const [dark, setDark] = useState(true);
@@ -31,10 +32,9 @@ export default function Home() {
       <Carousel dark={dark} />
       <About dark={dark} />
       <Skills dark={dark} />
+      <Projects dark={dark} />
 
-      <div id="Projects" className="h-200">
-        d
-      </div>
+     
       <div id="Contact" className="h-200">
         e
       </div>

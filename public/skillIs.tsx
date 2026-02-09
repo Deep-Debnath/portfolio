@@ -73,32 +73,41 @@ const skillIcons: Skill[] = [
 ];
 const skills = [
   {
-    title: "Core",
-    skills: "HTML, CSS, JavaScript",
+    title: "Frontend Frameworks",
+    skills: "React, Next.js (App Router), TypeScript",
   },
   {
-    title: "Frontend",
-    skills: "React, Next.js, TypeScript",
+    title: "Core Web",
+    skills: "HTML5, CSS3, JavaScript (ES6+)",
   },
   {
     title: "State Management",
-    skills: "Redux Toolkit, Zustand, Context API",
+    skills: "Redux Toolkit, Zustand, React Context API",
   },
   {
     title: "Styling & UI",
-    skills: "Tailwind CSS, MUI, Chakra UI, Bootstrap",
+    skills: "Tailwind CSS, Material UI (MUI), Framer Motion, Bootstrap",
   },
   {
-    title: "Tools & Workflow",
-    skills: "Git, GitHub, npm, Vite",
+    title: "Design & UX",
+    skills: "Figma, Responsive Design, UI Consistency",
   },
   {
-    title: "Testing & Build",
-    skills: "Vitest, React Testing Library",
+    title: "Testing",
+    skills: "Vitest, React Testing Library, Jest",
   },
   {
-    title: "Other",
-    skills: "REST APIs, Performance Optimization, Responsive Design",
+    title: "Build & Tooling",
+    skills: "Vite, npm, Git, GitHub",
+  },
+  {
+    title: "Deployment",
+    skills: "Vercel, Netlify, Github Pages",
+  },
+  {
+    title: "Web Practices",
+    skills: "REST APIs, Performance Optimization, SEO Basics",
   },
 ];
+
 export { skillIcons, skills };

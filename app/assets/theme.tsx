@@ -43,13 +43,13 @@ export default function Theme({ dark, setDark }: ThemeProps) {
 
   return (
     <div
-      className="fixed right-5 top-5 rounded-4xl border transition hover:scale-110"
+      className="fixed right-5 top-5 z-50 rounded-4xl border transition hover:scale-110"
       style={{ borderColor: dark ? "#313131" : "#bebebe" }}
     >
       <IconButton
         aria-label="theme"
         onClick={() => setDark(!dark)}
-        sx={{ backdropFilter: "blur(3px)" }}
+        sx={{ backdropFilter: "blur(10px)", }}
       >
         <AnimatePresence mode="wait">
           {dark ? (
