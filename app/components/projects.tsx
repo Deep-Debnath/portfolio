@@ -2,7 +2,7 @@ import { myprojects } from "@/public/myprojects";
 import FadeUp from "../assets/fadeup";
 import Image from "next/image";
 import { Chip } from "@mui/material";
-import { GitHub, Launch } from "@mui/icons-material";
+import { ArrowForward, GitHub, Launch } from "@mui/icons-material";
 
 export default function Projects({ dark }: { dark: boolean }) {
   return (
@@ -140,6 +140,16 @@ export default function Projects({ dark }: { dark: boolean }) {
               ),
             )}
           </ul>
+          <div className="pt-6">
+            <a href="/more-projects" className="group">
+              View more projects{"  "}
+              <ArrowForward
+                fontSize="small"
+                className="group-hover:translate-x-2"
+                sx={{ transition: "all 300ms" }}
+              />
+            </a>
+          </div>
         </div>
       </div>
     </FadeUp>
