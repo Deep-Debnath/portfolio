@@ -154,11 +154,22 @@ export default function Buttons({ dark }: { dark: boolean }) {
         </Button>
 
         <Stack direction="row" spacing={1}>
-          {[GitHub, LinkedIn, Instagram].map((Icon, index) => (
+          {[
+            { icon: GitHub, link: "https://github.com/Deep-Debnath" },
+            {
+              icon: LinkedIn,
+              link: "https://www.linkedin.com/in/deep-debnath-dev",
+            },
+            {
+              icon: Instagram,
+              link: "https://www.instagram.com/debnathdeep766",
+            },
+          ].map((Icon, index) => (
             <IconButton
+              href={Icon.link}
               className="group"
               key={index}
-              aria-label={Icon.name}
+              aria-label={Icon.icon.name}
               sx={{
                 border: "1px solid",
                 borderColor: dark ? "#313131" : "#bebebe",
@@ -169,7 +180,7 @@ export default function Buttons({ dark }: { dark: boolean }) {
                 },
               }}
             >
-              <Icon
+              <Icon.icon
                 className="group-hover:scale-110"
                 sx={{
                   color: dark ? "#cccccc" : "#313131",

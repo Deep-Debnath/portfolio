@@ -2,6 +2,7 @@
 
 import { ArrowForward, MenuOpen } from "@mui/icons-material";
 import {
+  Box,
   Button,
   Drawer,
   IconButton,
@@ -39,7 +40,8 @@ function Navbar({ active, dark }: NavbarProps) {
               border: "1px solid",
               color: dark ? "#dbdbdb" : "#4a4a4a",
               borderColor: dark ? "#313131" : "#bebebe",
-              backdropFilter: "blur(10px)",transition:"all 300ms"
+              backdropFilter: "blur(10px)",
+              transition: "all 300ms",
             }}
             onClick={() => setOpen(true)}
           >
@@ -47,31 +49,63 @@ function Navbar({ active, dark }: NavbarProps) {
           </IconButton>
           <Drawer
             anchor="top"
-            sx={{ backdropFilter: "blur(2px)" }}
             open={open}
             onClose={() => setOpen(false)}
+            PaperProps={{
+              sx: {
+                height: "100vh",
+                background: dark
+                  ? "linear-gradient(180deg, #0f0f0f, #151515)"
+                  : "linear-gradient(180deg, #ffffff, #f5f5f5)",
+                backdropFilter: "blur(12px)",
+              },
+            }}
           >
-            {SECTIONS.map((item) => (
-              <Button
-                key={item}
-                sx={{
-                  border: "none",
-                  color: dark ? "#cccccc" : "#313131",
-                  bgcolor: dark ? "#171717" : "white",
-                  width: "100%",
-                  gap: "5px",
-                  borderRadius: "0",
-                  py: "16px",
-                }}
-                onClick={() => {
-                  scrollToSection(item);
-                  setOpen(false);
-                }}
-              >
-                {item}
-                <ArrowForward sx={{ fontSize: "small" }} />
-              </Button>
-            ))}
+            <Box
+              sx={{
+                height: "100%",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "28px",
+              }}
+            >
+              {SECTIONS.map((item) => (
+                <Box
+                  key={item}
+                  onClick={() => {
+                    scrollToSection(item);
+                    setOpen(false);
+                  }}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "12px",
+                    cursor: "pointer",
+                    color: dark ? "#e5e5e5" : "#1a1a1a",
+                    fontSize: "1.4rem",
+                    letterSpacing: "2px",
+                    transition: "all 300ms ease",
+                    "&:hover": {
+                      transform: "translateX(6px)",
+                      color: "#4f9cff",
+                    },
+                    "&:hover svg": {
+                      transform: "translateX(6px)",
+                    },
+                  }}
+                >
+                  <span>{item}</span>
+                  <ArrowForward
+                    sx={{
+                      fontSize: "1.1rem",
+                      transition: "transform 300ms ease",
+                    }}
+                  />
+                </Box>
+              ))}
+            </Box>
           </Drawer>
         </div>
       ) : (

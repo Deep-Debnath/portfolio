@@ -10,6 +10,8 @@ import About from "./components/about";
 import Skills from "./components/skills";
 import Carousel from "./components/carousel";
 import Projects from "./components/projects";
+import Contact from "./components/contact";
+import Footer from "./components/footer";
 
 export default function Home() {
   const [dark, setDark] = useState(true);
@@ -33,11 +35,8 @@ export default function Home() {
       <About dark={dark} />
       <Skills dark={dark} />
       <Projects dark={dark} />
-
-     
-      <div id="Contact" className="h-200">
-        e
-      </div>
+      <Contact dark={dark} />
+      <Footer dark={dark}/>
     </div>
   );
 }

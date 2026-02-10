@@ -1,7 +1,7 @@
 import { myprojects } from "@/public/myprojects";
 import FadeUp from "../assets/fadeup";
 import Image from "next/image";
-import { Chip } from "@mui/material";
+import { Chip, Tooltip } from "@mui/material";
 import { ArrowForward, GitHub, Launch } from "@mui/icons-material";
 
 export default function Projects({ dark }: { dark: boolean }) {
@@ -140,15 +140,26 @@ export default function Projects({ dark }: { dark: boolean }) {
               ),
             )}
           </ul>
-          <div className="pt-6">
-            <a href="/more-projects" className="group">
-              View more projects{"  "}
-              <ArrowForward
-                fontSize="small"
-                className="group-hover:translate-x-2"
-                sx={{ transition: "all 300ms" }}
-              />
-            </a>
+          <div className="pt-8 flex justify-center">
+            <Tooltip title="Currently under development" placement="top" arrow>
+              <a
+                href="/more-projects"
+                className="group inline-flex items-center gap-2
+              rounded-full px-5 py-2
+              bg-white text-black
+              font-medium
+              transition-all duration-300
+              hover:bg-neutral-200
+              hover:shadow-[0_0_30px_rgba(255,255,255,0.25)]"
+              >
+                View more projects
+                <ArrowForward
+                  fontSize="small"
+                  sx={{ transition: "all .3s" }}
+                  className="group-hover:translate-x-1"
+                />
+              </a>
+            </Tooltip>
           </div>
         </div>
       </div>
