@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Deep Debnath — Portfolio
 
-## Getting Started
+A modern and responsive Portfolio Website built with Next.js, Tailwind CSS, Material UI, and Framer Motion to showcase my skills, projects, and professional journey as a Frontend Developer.
 
-First, run the development server:
+---
+
+## 🌐 Live Demo
+
+👉 [visit my portfolio](https://deep-debnath-portfolio.vercel.app/)
+
+---
+
+## 🧠 About the Project
+
+This portfolio represents my frontend development expertise with a clean, interactive, and performance-focused user interface.
+
+## ✨ Features
+
+- ⚡ Built using Next.js (App Router) for fast and SEO-optimized pages
+- 🎨 Modern responsive UI
+- 🌙 Dark / Light mode support
+- 🎬 Smooth scroll animations
+- 📱 Mobile-first design
+- 🎨 Styled with Tailwind CSS
+- 🧱 Modular and clean component structure
+- 🧾 Resume download section
+- 💬 Contact form with validation
+- 💻 Project showcase section with live links and GitHub links
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Library:** MUI
+- **Version Control:** Git & GitHub
+- **Deployment:** Vercel
+
+---
+
+## 🚀 Setup and run locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Deep-Debnath/portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📸 ScreenShots
 
-## Learn More
+![Homepage](./public/Screenshot%202026-02-11%20235128.png)
+![Projects](./public/Screenshot%202026-02-11%20235149.png)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📦 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is deployed on **Vercel**.
 
-## Deploy on Vercel
+To deploy your own version:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push code to GitHub
+2. Connect repository to Vercel
+3. Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧑‍💻 Author
+
+📧 Deep Debnath
+📍 Location: West Bengal, India
+💼 Role: Frontend Developer
+
+- [Portfolio](https://deep-debnath-portfolio.vercel.app)
+- [Email](mailto:deepdebnath7432@gmail.com)
+---
+
+## ⭐ If You Like This Project
+
+Give it a star on GitHub ⭐
+
+---
+
+Built with ❤️ by Deep Debnath
