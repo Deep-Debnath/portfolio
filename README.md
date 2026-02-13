@@ -91,6 +91,7 @@ To deploy your own version:
 💼 Role: Frontend Developer
 
 - [Portfolio](https://deep-debnath-portfolio.vercel.app)
+- [LinkedIn](https://www.linkedin.com/in/deep-debnath-dev)
 - [Email](mailto:deepdebnath7432@gmail.com)
 
 ---
