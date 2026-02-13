@@ -110,7 +110,7 @@ export default function Contact({ dark }: { dark: boolean }) {
           }`}
         />
         <p
-          className={`text-sm text-center pb-1 transition duration-300 ${dark ? "text-gray-300" : "text-gray-700"}`}
+          className={`text-sm text-center pb-2 transition duration-300 ${dark ? "text-gray-300" : "text-gray-700"}`}
         >
           Please contact me directly at{" "}
           <a
@@ -250,7 +250,8 @@ export default function Contact({ dark }: { dark: boolean }) {
               type="submit"
               disabled={loading}
               variant="contained"
-              sx={{mx:"10px",
+              sx={{
+                mx: "10px",
                 borderRadius: "999px",
                 padding: "10px",
                 backgroundColor: dark ? "#fff" : "#171717",

@@ -1,5 +1,23 @@
 export const myprojects = [
   {
+    title: "DeepChat - AI Assistant",
+    img: "/deepchat.png",
+    description:
+      "DeepChat is an AI-powered assistant built with Next.js (App Router) and Gemini API. Supports real-time conversations, image-based queries, persistent chat memory, and Markdown-rendered responses with syntax highlighting. Designed with smooth animations and a modern UI for an intuitive conversational experience.",
+    skills: [
+      "Next.js (App Router)",
+      "Gemini API Integration",
+      "REST APIs",
+      "JavaScript",
+      "Markdown Rendering",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+
+    visit: "https://deepchat-assistant.vercel.app",
+    github: "https://github.com/Deep-Debnath/Gemini-clone",
+  },
+  {
     title: "TaskFlow - Workflow Management",
     img: "/Taskflow.png",
     description:
@@ -45,22 +63,29 @@ export const myprojects = [
     ],
     visit: "https://my-portfolio-7432.vercel.app",
     github: "https://github.com/Deep-Debnath/my-portfolio",
-  },
-  {
-    title: "FolwForge - NodeFlow Editor",
-    img: "/n8n.png",
-    description:
-      "A node-based visual automation editor inspired by Zapier Canvas. Allows users to build workflows by connecting draggable nodes. Supports dynamic inputs, transformations, and outputs. Built to demonstrate complex UI state and flow-based logic.",
-    skills: ["React", "React Flow", "JavaScript", "Tailwind CSS", "Python"],
-    // visit: "https://your-live-link.com",
-    // github: "https://github.com/yourname/workflow-canvas",
-    buttons: "disabled",
-    tooltip: "Currently unavailable",
   },
 ];
 
 export const moreprojects = [
   {
+    title: "DeepChat - AI Assistant",
+    img: "/deepchat.png",
+    description:
+      "DeepChat is an AI-powered assistant built with Next.js (App Router) and Gemini API. Supports real-time conversations, image-based queries, persistent chat memory, and Markdown-rendered responses with syntax highlighting. Designed with smooth animations and a modern UI for an intuitive conversational experience.",
+    skills: [
+      "Next.js (App Router)",
+      "Gemini API Integration",
+      "REST APIs",
+      "JavaScript",
+      "Markdown Rendering",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+
+    visit: "https://deepchat-assistant.vercel.app",
+    github: "https://github.com/Deep-Debnath/Gemini-clone",
+  },
+  {
     title: "TaskFlow - Workflow Management",
     img: "/Taskflow.png",
     description:
@@ -115,21 +140,6 @@ export const moreprojects = [
     skills: ["React", "React Flow", "JavaScript", "Tailwind CSS", "Python"],
     // visit: "https://your-live-link.com",
     // github: "https://github.com/yourname/workflow-canvas",
-    tooltip: "Currently unavailable",
-  },
-  {
-    title: "Gemini Chat Bot",
-    img: "/gemini-chatbot.png",
-    description:
-      "Gemini Chat App- A sleek AI-powered chat app built with Next.js and Gemini API. Experience real-time conversations, smooth UI animations, and persistent memory",
-    skills: [
-      "React",
-      "API Integration",
-      "Gemini Api",
-      "JavaScript",
-      "UI Design",
-    ],
-    visit: "https://gemini-clone-5csw.vercel.app",
-    github: "https://github.com/Deep-Debnath/Gemini-clone",
+    tooltip: "Coming soon",
   },
 ];

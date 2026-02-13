@@ -24,12 +24,9 @@ export default function Projects({ dark }: { dark: boolean }) {
             className={`w-30 h-1 mb-6 relative left-[50%] -translate-x-1/2 transition duration-300 rounded-full ${dark ? "bg-gray-700" : "bg-gray-300"}`}
           />
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {myprojects.map(
-              (
-                { title, img, description, github, skills, visit, tooltip },
-                index,
-              ) => (
+              ({ title, img, description, github, skills, visit }, index) => (
                 <li
                   key={index}
                   className={`rounded-2xl p-1 transition-all duration-300 ${dark ? "border border-white/10 hover:border-white/20" : "border border-gray-200 hover:border-gray-300"}  `}
@@ -99,25 +96,21 @@ export default function Projects({ dark }: { dark: boolean }) {
                         </div>
 
                         <div className="flex w-full justify-between mt-4">
-                          <Tooltip title={tooltip} arrow placement="top">
-                            <a
-                              href={visit}
-                              target="_blank"
-                              className={`flex items-center ${visit || "cursor-not-allowed"} gap-1 h-9 px-4 text-sm font-medium rounded-full transition duration-300 ${dark ? "bg-white/10 text-gray-200 hover:bg-white/20" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
-                            >
-                              Visit <Launch fontSize="small" />
-                            </a>
-                          </Tooltip>
+                          <a
+                            href={visit}
+                            target="_blank"
+                            className={`flex items-center ${visit || "cursor-not-allowed"} gap-1 h-9 px-4 text-sm font-medium rounded-full transition duration-300 ${dark ? "bg-white/10 text-gray-200 hover:bg-white/20" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
+                          >
+                            Visit <Launch fontSize="small" />
+                          </a>
 
-                          <Tooltip title={tooltip} arrow placement="top">
-                            <a
-                              href={github}
-                              target="_blank"
-                              className={`flex items-center ${github || "cursor-not-allowed"} gap-1 h-9 px-4 text-sm font-medium rounded-full transition duration-300  ${dark ? "bg-white text-[#313131] hover:bg-gray-200" : "bg-gray-800 text-white hover:bg-gray-800"}`}
-                            >
-                              GitHub <GitHub fontSize="small" />
-                            </a>
-                          </Tooltip>
+                          <a
+                            href={github}
+                            target="_blank"
+                            className={`flex items-center ${github || "cursor-not-allowed"} gap-1 h-9 px-4 text-sm font-medium rounded-full transition duration-300  ${dark ? "bg-white text-[#313131] hover:bg-gray-200" : "bg-gray-800 text-white hover:bg-gray-800"}`}
+                          >
+                            GitHub <GitHub fontSize="small" />
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -127,25 +120,23 @@ export default function Projects({ dark }: { dark: boolean }) {
             )}
           </ul>
           <div className="pt-8 flex justify-center">
-            <Tooltip title="Currently under development" placement="top" arrow>
-              <a
-                href="/more-projects"
-                className="group inline-flex items-center gap-2
+            <a
+              href="/more-projects"
+              className="group inline-flex items-center gap-2
               rounded-full px-5 py-2
               bg-white text-black
               font-medium
               transition-all duration-300
               hover:bg-neutral-200
               hover:shadow-[0_0_30px_rgba(255,255,255,0.25)]"
-              >
-                View more projects
-                <ArrowForward
-                  fontSize="small"
-                  sx={{ transition: "all .3s" }}
-                  className="group-hover:translate-x-1"
-                />
-              </a>
-            </Tooltip>
+            >
+              View more projects
+              <ArrowForward
+                fontSize="small"
+                sx={{ transition: "all .3s" }}
+                className="group-hover:translate-x-1"
+              />
+            </a>
           </div>
         </div>
       </div>

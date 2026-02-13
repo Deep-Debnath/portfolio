@@ -24,7 +24,7 @@ export default function Page({ dark = true }: { dark: boolean }) {
             className={`w-30 h-1 mb-6 relative left-[50%] -translate-x-1/2 transition duration-300 rounded-full ${dark ? "bg-gray-700" : "bg-gray-300"}`}
           />
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {moreprojects.map(
               (
                 { title, img, description, github, skills, visit, tooltip },
@@ -32,7 +32,15 @@ export default function Page({ dark = true }: { dark: boolean }) {
               ) => (
                 <li
                   key={index}
-                  className={`rounded-2xl p-1 transition-all duration-300 ${dark ? "border border-white/10 hover:border-white/20" : "border border-gray-200 hover:border-gray-300"}  `}
+                  className={`
+    rounded-2xl p-1 transition-all duration-300
+    ${
+      dark
+        ? "border border-white/10 hover:border-white/20"
+        : "border border-gray-200 hover:border-gray-300"
+    }
+    ${moreprojects.length % 2 !== 0 && index === 0 ? "md:col-span-2 md:scale-90" : ""}
+  `}
                 >
                   <div className="group flex flex-col rounded-xl overflow-hidden transition duration-300">
                     <div

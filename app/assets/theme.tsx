@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import IconButton from "@mui/material/IconButton";
 import { Brightness2, Sunny } from "@mui/icons-material";
 import { AnimatePresence, motion, Variants } from "framer-motion";
+import { Tooltip } from "@mui/material";
 
 const tran: Variants = {
   initial: {
@@ -46,37 +47,39 @@ export default function Theme({ dark, setDark }: ThemeProps) {
       className="fixed right-5 top-5 z-50 rounded-4xl border transition hover:scale-110"
       style={{ borderColor: dark ? "#313131" : "#bebebe" }}
     >
-      <IconButton
-        aria-label="theme"
-        onClick={() => setDark(!dark)}
-        sx={{ backdropFilter: "blur(10px)", }}
-      >
-        <AnimatePresence mode="wait">
-          {dark ? (
-            <motion.div
-              key="sun"
-              variants={tran}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="flex justify-center items-center"
-            >
-              <Brightness2 className="rotate-39 text-[#dbdbdb]" />
-            </motion.div>
-          ) : (
-            <motion.div
-              key="moon"
-              variants={tran}
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              className="flex justify-center items-center"
-            >
-              <Sunny className="text-[#4a4a4a]" />
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </IconButton>
+      <Tooltip title={`toggle to ${dark ? "light" : "dark"}`} arrow>
+        <IconButton
+          aria-label="theme"
+          onClick={() => setDark(!dark)}
+          sx={{ backdropFilter: "blur(10px)" }}
+        >
+          <AnimatePresence mode="wait">
+            {dark ? (
+              <motion.div
+                key="sun"
+                variants={tran}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="flex justify-center items-center"
+              >
+                <Brightness2 className="rotate-39 text-[#dbdbdb]" />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="moon"
+                variants={tran}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="flex justify-center items-center"
+              >
+                <Sunny className="text-[#4a4a4a]" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </IconButton>
+      </Tooltip>
     </div>
   );
 }

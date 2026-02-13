@@ -4,9 +4,10 @@ import {
   GitHub,
   Instagram,
   LinkedIn,
+  SmartToyOutlined,
 } from "@mui/icons-material";
-import { Button, IconButton, Stack } from "@mui/material";
-import { AnimatePresence, motion, Variant, Variants } from "framer-motion";
+import { Button, IconButton, Stack, Tooltip } from "@mui/material";
+import { AnimatePresence, motion, Variants } from "framer-motion";
 import { useState } from "react";
 
 const exitArrow: Variants = {
@@ -155,40 +156,57 @@ export default function Buttons({ dark }: { dark: boolean }) {
 
         <Stack direction="row" spacing={1}>
           {[
-            { icon: GitHub, link: "https://github.com/Deep-Debnath" },
+            {
+              icon: GitHub,
+              link: "https://github.com/Deep-Debnath",
+              tip: "github",
+            },
             {
               icon: LinkedIn,
               link: "https://www.linkedin.com/in/deep-debnath-dev",
+              tip: "linkedin",
+            },
+            {
+              icon: SmartToyOutlined,
+              link: "https://deepchat-assistant.vercel.app",
+              tip: "deepchat",
             },
             {
               icon: Instagram,
               link: "https://www.instagram.com/debnathdeep766",
+              tip: "instagram",
             },
           ].map((Icon, index) => (
-            <IconButton
-              href={Icon.link}
-              className="group"
+            <Tooltip
+              title={"visit " + Icon.tip}
+              arrow
+              placement="top"
               key={index}
-              aria-label={Icon.icon.name}
-              sx={{
-                border: "1px solid",
-                borderColor: dark ? "#313131" : "#bebebe",
-                transition: "all .3s",
-                "&:hover": {
-                  backgroundColor: dark ? "#1f1f1f" : "#f5f5f5",
-                  borderColor: dark ? "#555" : "#999",
-                },
-              }}
             >
-              <Icon.icon
-                className="group-hover:scale-110"
+              <IconButton
+                href={Icon.link}
+                className="group"
+                aria-label={Icon.icon.name}
                 sx={{
-                  color: dark ? "#cccccc" : "#313131",
-                  fontSize: "1.9rem",
+                  border: "1px solid",
+                  borderColor: dark ? "#313131" : "#bebebe",
                   transition: "all .3s",
+                  "&:hover": {
+                    backgroundColor: dark ? "#1f1f1f" : "#f5f5f5",
+                    borderColor: dark ? "#555" : "#999",
+                  },
                 }}
-              />
-            </IconButton>
+              >
+                <Icon.icon
+                  className="group-hover:scale-110"
+                  sx={{
+                    color: dark ? "#cccccc" : "#313131",
+                    fontSize: "1.9rem",
+                    transition: "all .3s",
+                  }}
+                />
+              </IconButton>
+            </Tooltip>
           ))}
         </Stack>
       </Stack>
